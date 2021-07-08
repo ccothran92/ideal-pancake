@@ -5,7 +5,7 @@ class BinarySoilSensor(SoilSensor):
     def __init__(self, gpioPin):
         self.sensor = DigitalInputDevice(gpioPin)
 
-    def getMoistureContent(self):
+    def get_moisture_percentage(self):
         if self.sensor.is_active == True:
             return 100
         else:
