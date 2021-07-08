@@ -17,7 +17,7 @@ class KasaOutlet(object):
         print("Stopping the watering of plants")
         self._turn_off()
 
-    def _state_info(self):
+    async def _state_info(self):
         await self.outlet.update()
         print(self.outlet.state_information)
 
