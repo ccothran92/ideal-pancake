@@ -16,10 +16,10 @@ class PlantWateringSystem(object):
 
     def start(self):
         while True:
-        if sensor.needs_watering():
-            watering_device.water_my_plants()
+        if self.sensor.needs_watering():
+            self.watering_device.water_my_plants()
         else: 
-            watering_device.dont_water_my_plants()
+            self.watering_device.dont_water_my_plants()
         time.sleep(SLEEP_TIME)
 
 
