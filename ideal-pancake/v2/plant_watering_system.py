@@ -1,8 +1,3 @@
-class PlantWateringSystem(object):
-    def __init__()
-    
-
-
 from soil_sensor import SoilSensor
 from plant import Plant
 from soil import Soil
@@ -12,18 +7,19 @@ from binary_soil_sensor import BinarySoilSensor
 import time
 
 SLEEP_TIME = 3
-KASA_IP = "192.168.1.2"
-GPIO_PIN = 26
 
-waterer = WateringDevice(KasaOutlet(KASA_IP))
-myPlant = Plant(80, 1)
-mySensor = SoilSensor(myPlant, BinarySoilSensor(26))
+class PlantWateringSystem(object):
+    def __init__(plant: Plant, watering_device: WateringDevice, sensor: SoilSensor):
+        self.gpioPin = gpioPin
+        self.watering_device = watering_device
+        self.sensor = sensor
 
-while True:
-    if mySensor.needs_watering():
-        waterer.water_my_plants()
-    else: 
-        waterer.dont_water_my_plants()
-    time.sleep(SLEEP_TIME)
+    def start(self):
+        while True:
+        if sensor.needs_watering():
+            watering_device.water_my_plants()
+        else: 
+            watering_device.dont_water_my_plants()
+        time.sleep(SLEEP_TIME)
 
-print(mySensor.needs_watering())
+
