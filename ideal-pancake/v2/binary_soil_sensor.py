@@ -11,3 +11,5 @@ class BinarySoilSensor(SoilSensor):
         else:
              return 0
 
+    def get_soil_state(self):
+        return 0
