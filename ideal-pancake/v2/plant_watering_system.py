@@ -19,5 +19,3 @@ class PlantWateringSystem(object):
             else: 
                 self.watering_device.dont_water_my_plants()
             time.sleep(SLEEP_TIME)
-
-
