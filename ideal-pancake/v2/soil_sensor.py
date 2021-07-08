@@ -1,5 +1,6 @@
 from soil import Soil
 from plant import Plant
+from binary_soil_sensor import BinarySoilSensor
 
 class SoilSensor(object):
     def __init__(self, plant: Plant, sensor: BinarySoilSensor): #TODO: Is this an unnecessary layer of abstraction? Probably. But I want to decouple specific types of sensors from the acting on the data

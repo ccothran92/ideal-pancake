@@ -3,12 +3,16 @@ from plant import Plant
 from soil import Soil
 from watering_device import WateringDevice
 from kasa_outlet import KasaOutlet
+from binary_soil_sensor import BinarySoilSensor
 import time
-SLEEP_TIME = 3
 
-waterer = WateringDevice(KasaOutlet("192.168.1.2"))
+SLEEP_TIME = 3
+KASA_IP = "192.168.1.2"
+GPIO_PIN = 26
+
+waterer = WateringDevice(KasaOutlet(KASA_IP))
 myPlant = Plant(80, 1)
-mySensor = SoilSensor(myPlant)
+mySensor = SoilSensor(myPlant, BinarySoilSensor(26))
 
 while True:
     if mySensor.needs_watering():
