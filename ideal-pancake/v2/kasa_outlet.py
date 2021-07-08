@@ -5,6 +5,7 @@ class KasaOutlet(object):
 
     def __init__(self, ipAddr):
         self.outlet = kasa.SmartPlug(ipAddr)
+        self.outlet.update()
         print(self.outlet.state_information)
         self._turn_off()
 
