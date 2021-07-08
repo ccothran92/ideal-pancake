@@ -17,7 +17,6 @@ class KasaOutlet(object):
         self._turn_off()
 
     def _turn_on(self):
-        if()
         asyncio.run(self.outlet.turn_on())
 
     def _turn_off(self):
