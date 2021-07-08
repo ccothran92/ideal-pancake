@@ -29,4 +29,4 @@ class KasaOutlet(object):
     async def _turn_off(self):
         await self.outlet.update()
         if await self.outlet.is_on:
-            await self.outlet.turn_off())
+            await self.outlet.turn_off()
