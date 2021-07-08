@@ -3,9 +3,9 @@ from plant import Plant
 from soil_sensor import SoilSensor
 
 class PlantWaterer(object):
-    def __init__(self, plant: Plant, sensor: SoilSensor): #TODO: Is this an unnecessary layer of abstraction? Probably. But I want to decouple specific types of sensors from
+    def __init__(self, plant: Plant, soilSensor: SoilSensor): #TODO: Is this an unnecessary layer of abstraction? Probably. But I want to decouple specific types of sensors from
         self.plant = plant
-        self.sensor = sensor
+        self.soilSensor = sensor
 
     def needs_watering(self):
-        return self.plant.desired_moisture_percentage < self.sensor.get_moisture_percentage()
+        return self.plant.desired_moisture_percentage < self.soilSensor.get_soil_state().get_moisture_percentage()
