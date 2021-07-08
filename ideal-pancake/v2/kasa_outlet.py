@@ -7,8 +7,8 @@ class KasaOutlet(object):
         self.outlet = kasa.SmartPlug(ipAddr)
         self.turn_off()
 
-    def turn_on():
+    def turn_on(self):
         asyncio.run(self.outlet.turn_on())
 
-    def turn_off():
+    def turn_off(self):
         asyncio.run(self.outlet.turn_off())
