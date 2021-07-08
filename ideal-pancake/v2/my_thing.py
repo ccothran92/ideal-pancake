@@ -2,7 +2,7 @@ from plant_watering_system import PlantWateringSystem
 
 
 
-waterer = WateringDevice(KasaOutlet("192.168.1.2"))
+waterer = KasaOutlet("192.168.1.2")
 myPlant = Plant(80, 1)
 mySensor = SoilSensor(myPlant, BinarySoilSensor(26))
 
