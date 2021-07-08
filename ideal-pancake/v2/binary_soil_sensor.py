@@ -1,6 +1,6 @@
 from gpiozero import DigitalInputDevice
 
-class BinarySoilSensor(object):
+class BinarySoilSensor(SoilSensor):
     def __init__(self, gpioPin):
         self.sensor = DigitalInputDevice(gpioPin)
 

@@ -1,17 +1,11 @@
-from soil import Soil
-from plant import Plant
-from binary_soil_sensor import BinarySoilSensor
+from abc import ABC, abstractmethod
 
-class SoilSensor(object):
-    def __init__(self, plant: Plant, sensor: BinarySoilSensor): #TODO: Is this an unnecessary layer of abstraction? Probably. But I want to decouple specific types of sensors from the acting on the data
-        self.plant = plant
-        self.sensor = sensor
+class SoilSensor(ABC):
 
-    def needs_watering(self):
-        soil = self._get_soil_state()
-        if (self.plant.desiredMoisturePercentage < self.sensor.getMoistureContent()):
-            return True
-        return False
+    def __init__(self):
+        super(SoilSensor, self).__init__()
     
-    def _get_soil_state(self):
-        return 
+    @abstractmethod
+    def get_moisture_percentage(self):
+        pass
+        

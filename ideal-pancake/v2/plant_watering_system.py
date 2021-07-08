@@ -1,4 +1,9 @@
-from plant_waterer import PlantWaterer
+class PlantWateringSystem(object):
+    def __init__()
+    
+
+
+from soil_sensor import SoilSensor
 from plant import Plant
 from soil import Soil
 from watering_device import WateringDevice
@@ -12,7 +17,7 @@ GPIO_PIN = 26
 
 waterer = WateringDevice(KasaOutlet(KASA_IP))
 myPlant = Plant(80, 1)
-mySensor = PlantWaterer(myPlant, BinarySoilSensor(26))
+mySensor = SoilSensor(myPlant, BinarySoilSensor(26))
 
 while True:
     if mySensor.needs_watering():
