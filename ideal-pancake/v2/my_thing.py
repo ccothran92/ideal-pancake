@@ -1,6 +1,6 @@
 from plant_watering_system import PlantWateringSystem
-
-
+from kasa_outlet import KasaOutlet
+from plant import Plant
 
 waterer = KasaOutlet("192.168.1.2")
 myPlant = Plant(80, 1)
