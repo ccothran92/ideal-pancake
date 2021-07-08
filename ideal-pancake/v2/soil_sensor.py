@@ -11,5 +11,5 @@ class SoilSensor(ABC):
         pass
         
     @abstractmethod
-    def get_soil_state(self)-> soil
+    def get_soil_state(self)-> Soil:
         pass
