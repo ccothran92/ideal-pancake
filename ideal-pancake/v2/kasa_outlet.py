@@ -8,18 +8,15 @@ class KasaOutlet(object):
     def __init__(self, ipAddr):
         self.outlet = kasa.SmartPlug(ipAddr) #TODO Self discovery?
         asyncio.run(self._state_info())
-        self.led = LED(2)
 
     def water_my_plants(self):
         print("Attempting to water plants")
         asyncio.run(self._turn_on())
-        self.led.on()
 
     
     def dont_water_my_plants(self):
         print("Stopping the watering of plants")
         asyncio.run(self._turn_off())
-        self.led.off()
 
     async def _state_info(self):
         await self.outlet.update()
