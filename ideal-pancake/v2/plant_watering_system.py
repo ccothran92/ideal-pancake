@@ -3,8 +3,6 @@ from plant import Plant
 from soil import Soil
 from watering_device import WateringDevice
 from plant_waterer import PlantWaterer
-from kasa_outlet import KasaOutlet
-from binary_soil_sensor import BinarySoilSensor
 import time
 
 SLEEP_TIME = 3

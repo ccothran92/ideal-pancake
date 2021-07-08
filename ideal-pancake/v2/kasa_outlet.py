@@ -20,19 +20,3 @@ class KasaOutlet(object):
 
     def _turn_off(self):
         asyncio.run(self.outlet.turn_off())
-
-
-# from kasa_outlet import KasaOutlet
-
-# class WateringDevice(object):
-
-#     def __init__(self, device: KasaOutlet): #should be extendable to not just be kasa. i.e. gpio out
-#         self.device = device
-
-#     def water_my_plants(self):
-#         print("Attempting to water plants")
-#         self.device.turn_on()
-    
-#     def dont_water_my_plants(self):
-#         print("Stopping the watering of plants")
-#         self.device.turn_off()
