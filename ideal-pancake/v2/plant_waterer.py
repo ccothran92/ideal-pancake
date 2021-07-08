@@ -8,4 +8,4 @@ class PlantWaterer(object):
         self.soilSensor = soilSensor
 
     def needs_watering(self):
-        return self.plant.desired_moisture_percentage < self.soilSensor.get_soil_state().get_moisture_percentage()
+        return self.plant.desired_moisture_percentage < self.soilSensor.get_soil_state().moisture_percentage

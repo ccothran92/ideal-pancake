@@ -1,4 +1,4 @@
 class Soil(object):
-    def __init__(self, moistureContentPercentage: int):
-        self.moistureContentPercentage = moistureContentPercentage
+    def __init__(self, moisture_percentage: int):
+        self.moisture_percentage = moisture_percentage
 
