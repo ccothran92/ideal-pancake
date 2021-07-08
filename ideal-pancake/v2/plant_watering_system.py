@@ -10,8 +10,7 @@ import time
 SLEEP_TIME = 3
 
 class PlantWateringSystem(object):
-    def __init__(plant: Plant, watering_device: WateringDevice, sensor: SoilSensor):
-        self.gpioPin = gpioPin
+    def __init__(self, plant: Plant, watering_device: WateringDevice, sensor: SoilSensor):
         self.watering_device = watering_device
         self.plant_waterer = PlantWaterer(plant, sensor)
     
