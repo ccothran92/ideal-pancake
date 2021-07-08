@@ -12,4 +12,4 @@ class BinarySoilSensor(SoilSensor):
              return 0
 
     def get_soil_state(self):
-        return 0
+        return "sdasd"
