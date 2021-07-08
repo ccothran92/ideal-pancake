@@ -5,7 +5,7 @@ from binary_soil_sensor import BinarySoilSensor
 
 waterer = KasaOutlet("192.168.1.2")
 myPlant = Plant(80, 1)
-mySensor = SoilSensor(myPlant, BinarySoilSensor(26))
+mySensor = BinarySoilSensor(26)
 
 watering_system_1 = PlantWateringSystem(plant, waterer, mySensor)
 watering_system_1.start()
