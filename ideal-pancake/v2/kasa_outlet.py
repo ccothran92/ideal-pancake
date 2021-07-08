@@ -6,7 +6,6 @@ class KasaOutlet(object):
     def __init__(self, ipAddr):
         self.outlet = kasa.SmartPlug(ipAddr)
         asyncio.run(self._state_info())
-        self._turn_off()
 
     def water_my_plants(self):
         print("Attempting to water plants")
