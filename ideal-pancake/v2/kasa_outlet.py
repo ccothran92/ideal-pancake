@@ -10,11 +10,11 @@ class KasaOutlet(object):
 
     def water_my_plants(self):
         print("Attempting to water plants")
-        self._turn_on()
+        asyncio.run(self._turn_on())
     
     def dont_water_my_plants(self):
         print("Stopping the watering of plants")
-        self._turn_off()
+        asyncio.run(self._turn_off())
 
     async def _state_info(self):
         await self.outlet.update()
@@ -26,5 +26,7 @@ class KasaOutlet(object):
         if not await awaitself.outlet.is_on:
             await self.outlet.turn_on()
 
-    def _turn_off(self):
-        asyncio.run(self.outlet.turn_off())
+    async def _turn_off(self):
+        await self.outlet.update()
+            if await awaitself.outlet.is_on:
+                await self.outlet.turn_off())
