@@ -14,7 +14,6 @@ class KasaOutlet(object):
     
     def dont_water_my_plants(self):
         print("Stopping the watering of plants")
-        if()
         self._turn_off()
 
     def _turn_on(self):
