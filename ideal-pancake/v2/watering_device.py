@@ -9,6 +9,6 @@ class WateringDevice(object):
         print("Attempting to water plants")
         self.device.turn_on()
     
-    def stop_watering_my_plants():
+    def dont_water_my_plants():
         print("Stopping the watering of plants")
         self.device.turn_off()
