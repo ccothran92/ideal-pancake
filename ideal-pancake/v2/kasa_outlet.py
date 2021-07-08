@@ -5,7 +5,6 @@ class KasaOutlet(object):
 
     def __init__(self, ipAddr):
         self.outlet = kasa.SmartPlug(ipAddr)
-        self.outlet.update()
         asyncio.run(self._state_info())
         self._turn_off()
 
