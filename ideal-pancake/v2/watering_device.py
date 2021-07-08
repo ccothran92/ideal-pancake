@@ -1,14 +1,14 @@
-from kasa_outlet import KasaOutlet
+from abc import ABC, abstractmethod
 
-class WateringDevice(object):
+class WateringDevice(ABC):
 
-    def __init__(self, device: KasaOutlet): #should be extendable to not just be kasa. i.e. gpio out
-        self.device = device
-
-    def water_my_plants(self):
-        print("Attempting to water plants")
-        self.device.turn_on()
+    def __init__(self):
+        super(WateringDevice, self).__init__()
     
+    @abstractmethod
+    def water_my_plants(self):
+        pass
+
+    @abstractmethod
     def dont_water_my_plants(self):
-        print("Stopping the watering of plants")
-        self.device.turn_off()
+        pass
