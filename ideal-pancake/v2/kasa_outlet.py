@@ -5,6 +5,7 @@ class KasaOutlet(object):
 
     def __init__(self, ipAddr):
         self.outlet = kasa.SmartPlug(ipAddr)
+        print(kasa.state)
         self._turn_off()
 
     def water_my_plants(self):
