@@ -7,6 +7,8 @@ class KasaOutlet(object):
 
     def __init__(self, ipAddr):
         self.outlet = kasa.SmartPlug(ipAddr) #TODO Self discovery?
+        asyncio.run(self.outlet.update())
+
 
     def water_my_plants(self):
         print("Attempting to water plants")
