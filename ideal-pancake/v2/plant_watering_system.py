@@ -5,7 +5,7 @@ from watering_device import WateringDevice
 from plant_waterer import PlantWaterer
 import time
 
-SLEEP_TIME_REST = 3
+SLEEP_TIME_REST = 3600
 SLEEP_TIME_WHEN_WATERING = 1
 
 class PlantWateringSystem(object):
