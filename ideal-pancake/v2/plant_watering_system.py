@@ -17,7 +17,7 @@ class PlantWateringSystem(object):
         while True:
             if self.plant_waterer.needs_watering():
                 self.watering_device.water_my_plants()
-                time.sleep(SLEEP_TIME_WHEN_WATERING()
+                time.sleep(SLEEP_TIME_WHEN_WATERING)
             else: 
                 self.watering_device.dont_water_my_plants()
                 time.sleep(SLEEP_TIME)
