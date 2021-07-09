@@ -7,7 +7,6 @@ class KasaOutlet(object):
 
     def __init__(self, ipAddr):
         self.outlet = kasa.SmartPlug(ipAddr) #TODO Self discovery?
-        asyncio.run(self._state_info())
 
     def water_my_plants(self):
         print("Attempting to water plants")
@@ -18,12 +17,7 @@ class KasaOutlet(object):
         print("Stopping the watering of plants")
         asyncio.run(self._turn_off())
 
-    async def _state_info(self):
-        await self.outlet.update()
-        print(self.outlet.state_information)
-
     async def _turn_on(self):
-        # asyncio.run(_state_info)
         await self.outlet.update()
         if not self.outlet.is_on:
             await self.outlet.turn_on()
