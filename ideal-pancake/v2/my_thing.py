@@ -9,3 +9,9 @@ mySensor = BinarySoilSensor(26)
 
 watering_system_1 = PlantWateringSystem(myPlant, waterer, mySensor)
 watering_system_1.start()
+
+
+myPlant2 = Plant(80, 1)
+mySensor2 = BinarySoilSensor(26)
+watering_system_2 = PlantWateringSystem(myPlant, waterer, mySensor)
+watering_system_2.start()
